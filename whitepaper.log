@@ -1,0 +1,397 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.15)  21 NOV 2021 21:38
+entering extended mode
+**./whitepaper.tex
+(whitepaper.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-10-18> (llncs.cls
+Document Class: llncs 2018/03/10 v2.20 
+ LaTeX document class for Lecture Notes in Computer Science
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+(C:\Program Files\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count190
+\mult@box=\box50
+\multicol@leftmargin=\dimen139
+\c@unbalance=\count191
+\c@collectmore=\count192
+\doublecol@number=\count193
+\multicoltolerance=\count194
+\multicolpretolerance=\count195
+\full@width=\dimen140
+\page@free=\dimen141
+\premulticols=\dimen142
+\postmulticols=\dimen143
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box51
+\last@line=\box52
+\maxbalancingoverflow=\dimen144
+\mult@rightbox=\box53
+\mult@grightbox=\box54
+\mult@gfirstbox=\box55
+\mult@firstbox=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\c@minrows=\count196
+\c@columnbadness=\count197
+\c@finalcolumnbadness=\count198
+\last@try=\dimen145
+\multicolovershoot=\dimen146
+\multicolundershoot=\dimen147
+\mult@nat@firstbox=\box94
+\colbreak@box=\box95
+\mc@col@check@num=\count199
+)
+(C:\Program Files\MiKTeX\tex/latex/oberdiek\aliascnt.sty
+Package: aliascnt 2018/09/07 v1.5 Alias counters (HO)
+)
+\c@chapter=\count266
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 364.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 365.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 367.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 368.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 369.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 370.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 371.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
+\tocchpnum=\dimen148
+\tocsecnum=\dimen149
+\tocsectotal=\dimen150
+\tocsubsecnum=\dimen151
+\tocsubsectotal=\dimen152
+\tocsubsubsecnum=\dimen153
+\tocsubsubsectotal=\dimen154
+\tocparanum=\dimen155
+\tocparatotal=\dimen156
+\tocsubparanum=\dimen157
+\@tempcntc=\count267
+\fnindent=\dimen158
+\c@@inst=\count268
+\c@@auth=\count269
+\c@auco=\count270
+\instindent=\dimen159
+\authrun=\box96
+\authorrunning=\toks16
+\tocauthor=\toks17
+\titrun=\box97
+\titlerunning=\toks18
+\toctitle=\toks19
+\c@theorem=\count271
+\c@case=\count272
+\c@conjecture=\count273
+\c@corollary=\count274
+\c@definition=\count275
+\c@example=\count276
+\c@exercise=\count277
+\c@lemma=\count278
+\c@note=\count279
+\c@problem=\count280
+\c@property=\count281
+\c@proposition=\count282
+\c@question=\count283
+\c@solution=\count284
+\c@remark=\count285
+\headlineindent=\dimen160
+)
+(C:\Program Files\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count286
+\float@exts=\toks20
+\float@box=\box98
+\@float@everytoks=\toks21
+\@floatcapt=\box99
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
+)
+(C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count287
+\l__pdf_internal_box=\box100
+)
+(whitepaper.aux)
+\openout1 = `whitepaper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+ (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count288
+\scratchdimen=\dimen163
+\scratchbox=\box101
+\nofMPsegments=\count289
+\nofMParguments=\count290
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen164
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
+\everyMPtoPDFconversion=\toks24
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 35.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
+35.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 35.
+
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 35.
+
+[1
+
+{C:/Users/seunglee/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+
+LaTeX Warning: Citation `drop-culture-Fox-2021' on page 2 undefined on input li
+ne 61.
+
+
+LaTeX Warning: Citation `drops-sneakers-Koss-2021' on page 2 undefined on input
+ line 63.
+
+
+LaTeX Warning: Citation `bots-gifts-Hunt-2021' on page 2 undefined on input lin
+e 65.
+
+
+LaTeX Warning: Citation `bots-gifts-Hunt-2021' on page 2 undefined on input lin
+e 70.
+
+
+LaTeX Warning: Citation `streetwear-impact-SnR-2021' on page 2 undefined on inp
+ut line 72.
+
+
+LaTeX Warning: Citation `supreme-drop-FAZ-2021' on page 2 undefined on input li
+ne 74.
+
+[2]
+
+LaTeX Warning: Citation `bots-gifts-Hunt-2021' on page 3 undefined on input lin
+e 78.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 78.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 78.
+
+LaTeX Warning: Citation `bots-gifts-Hunt-2021' on page 3 undefined on input lin
+e 78.
+
+
+LaTeX Warning: Citation `nike-quote-Hunt' on page 3 undefined on input line 80.
+
+
+
+LaTeX Warning: Citation `online-ticket-Wiki-2021' on page 3 undefined on input 
+line 82.
+
+
+LaTeX Warning: Citation `bots-act-FTC-2021' on page 3 undefined on input line 8
+2.
+
+
+LaTeX Warning: Citation `2019-mainsale-BMP-2019' on page 3 undefined on input l
+ine 82.
+
+
+LaTeX Warning: Citation `jacque-slade-quote-Hunt' on page 3 undefined on input 
+line 84.
+
+
+LaTeX Warning: Citation `bots-gifts-Hunt-2021' on page 3 undefined on input lin
+e 86.
+
+[3]
+
+LaTeX Warning: Citation `pat-sullivan-quote-Hunt' on page 4 undefined on input 
+line 88.
+
+[4]
+<Figures_and_Tables/atom.png, id=26, 260.975pt x 301.125pt>
+File: Figures_and_Tables/atom.png Graphic file (type png)
+<use Figures_and_Tables/atom.png>
+Package pdftex.def Info: Figures_and_Tables/atom.png  used on input line 118.
+(pdftex.def)             Requested size: 130.48718pt x 150.56212pt.
+File: Figures_and_Tables/atom.png Graphic file (type png)
+<use Figures_and_Tables/atom.png>
+Package pdftex.def Info: Figures_and_Tables/atom.png  used on input line 124.
+(pdftex.def)             Requested size: 130.48718pt x 150.56212pt.
+File: Figures_and_Tables/atom.png Graphic file (type png)
+<use Figures_and_Tables/atom.png>
+Package pdftex.def Info: Figures_and_Tables/atom.png  used on input line 132.
+(pdftex.def)             Requested size: 130.48718pt x 150.56212pt.
+ [5 <./Figures_and_Tables/atom.png>] [6]
+File: Figures_and_Tables/atom.png Graphic file (type png)
+<use Figures_and_Tables/atom.png>
+Package pdftex.def Info: Figures_and_Tables/atom.png  used on input line 156.
+(pdftex.def)             Requested size: 130.48718pt x 150.56212pt.
+ [7]
+File: Figures_and_Tables/atom.png Graphic file (type png)
+<use Figures_and_Tables/atom.png>
+Package pdftex.def Info: Figures_and_Tables/atom.png  used on input line 180.
+(pdftex.def)             Requested size: 130.48718pt x 150.56212pt.
+ [8] [9]
+Overfull \hbox (5.62712pt too wide) in paragraph at lines 233--234
+[]\OT1/cmr/m/n/10 Current Lot-ter-ies Par-tic-i-pat-ing in, to in-clude time re
+-main-ing and to-tal amount
+ []
+
+[10]
+File: Figures_and_Tables/atom.png Graphic file (type png)
+<use Figures_and_Tables/atom.png>
+Package pdftex.def Info: Figures_and_Tables/atom.png  used on input line 268.
+(pdftex.def)             Requested size: 130.48718pt x 150.56212pt.
+ [11] [12]
+File: Figures_and_Tables/atom.png Graphic file (type png)
+<use Figures_and_Tables/atom.png>
+Package pdftex.def Info: Figures_and_Tables/atom.png  used on input line 307.
+(pdftex.def)             Requested size: 130.48718pt x 150.56212pt.
+ [13]
+File: Figures_and_Tables/atom.png Graphic file (type png)
+<use Figures_and_Tables/atom.png>
+Package pdftex.def Info: Figures_and_Tables/atom.png  used on input line 337.
+(pdftex.def)             Requested size: 130.48718pt x 150.56212pt.
+ [14]
+File: Figures_and_Tables/atom.png Graphic file (type png)
+<use Figures_and_Tables/atom.png>
+Package pdftex.def Info: Figures_and_Tables/atom.png  used on input line 350.
+(pdftex.def)             Requested size: 130.48718pt x 150.56212pt.
+ [15] [16] [17]
+No file whitepaper.bbl.
+[18] (whitepaper.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1807 strings out of 478907
+ 26330 string characters out of 2861739
+ 337059 words of memory out of 3000000
+ 19695 multiletter control sequences out of 15000+600000
+ 408264 words of font info for 43 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,9n,66p,1228b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\seunglee\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\t
+crm1000.pk> <C:\Users\seunglee\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\tcrm0900.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmtt9.pfb>
+Output written on whitepaper.pdf (18 pages, 252921 bytes).
+PDF statistics:
+ 136 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
