@@ -1,0 +1,71 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{synthetix}
+Synthetix. \url{https://www.synthetix.io} (2019)
+
+\bibitem{al2020trustworthy}
+Al-Breiki, H., Rehman, M.H.U., Salah, K., Svetinovic, D.: Trustworthy
+  blockchain oracles: Review, comparison, and open research challenges. IEEE
+  Access  \textbf{8},  85675--85685 (2020)
+
+\bibitem{buterin2014ethereum}
+Buterin, V., et~al.: Ethereum: A next-generation smart contract and
+  decentralized application platform. URL https://github.com/ethereum/wiki/wiki
+   (2014)
+
+\bibitem{chainlinkDoc}
+{ChainLink}: Chainlink developer documentation. \url{https://docs.chain.link}
+
+\bibitem{chainlinkPriceFeeds}
+{ChainLink}: Ethereum price feeds.
+  \url{https://docs.chain.link/docs/ethereum-addresses}
+
+\bibitem{chainlinkdevcomm}
+ChainLink: Developer communications.
+  \url{https://docs.chain.link/docs/developer-communications} (August 2020)
+
+\bibitem{chainlinkecosys}
+ChainLink: Ecosystem. \url{https://chainlinkecosystem.com/ecosystem} (March
+  2021)
+
+\bibitem{coinmardefi}
+Coinmarketcap: Defi category. \url{https://coinmarketcap.com/defi} (March 2021)
+
+\bibitem{egberts2017oracle}
+Egberts, A.: The oracle problem-an analysis of how blockchain oracles undermine
+  the advantages of decentralized ledger systems  (2017)
+
+\bibitem{chainlink}
+Ellis, S., Juels, A., Nazarov, S.: Chainlink: A decentralized oracle network.
+  \url{https://link.smartcontract.com/whitepaper} (2017)
+
+\bibitem{team2017etherscan}
+Etherscan: The ethereum block explorer (2017)
+
+\bibitem{kehrli2016blockchain}
+Kehrli, J.: Blockchain 2.0-from bitcoin transactions to smart contract
+  applications. Niceideas, November. Available at: https://www. niceideas.
+  ch/roller2/badtrash/entry/blockchain-2-0-frombitcoin  (2016)
+
+\bibitem{liu2020look}
+Liu, B., Szalachowski, P., Zhou, J.: A first look into defi oracles. arXiv
+  preprint arXiv:2005.04377  (2020)
+
+\bibitem{augur}
+Peterson, J., Krug, J., Zoltu, M., Williams, A.K., Alexander, S.: Augur: a
+  decentralized oracle and prediction market platform (2019)
+
+\bibitem{provable}
+Provable: \url{https://provable.xyz}, accessed on Sep. 10, 2020.
+
+\bibitem{szabo1997formalizing}
+Szabo, N.: Formalizing and securing relationships on public networks. First
+  Monday  (1997)
+
+\bibitem{machine2015internet}
+{Wayback Machine}: The internet archive. \url{https://archive.org/web/}
+
+\end{thebibliography}
