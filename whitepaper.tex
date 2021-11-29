@@ -151,7 +151,7 @@ The first three can be made inherent to a blockchain protocol; for the last, ora
 
 \section{Users}\label{section-Users}
 
-The \textbf{DropShop} platform is composed of two types of Users: \emph{Sponsors}, who create lotteries, and \emph{Participants}, who stake funds to win them.  As a decentralized platform, any entity in the world can be a Sponsor, and any entity in the world can be a Participant; thus, any user can be both a Sponsor and a Participant.  The interface when using the platform as a Sponsor or Participant differ greatly, although every user has access to both.  However, most users will utilize the platform as just one of these user types.
+The \textbf{DropShop} platform is composed of two types of Users: \emph{Sponsors}, who create lotteries (also known as 'Drops'), and \emph{Participants}, who stake funds to win them.  As a decentralized platform, any entity in the world can be a Sponsor, and any entity in the world can be a Participant; thus, every user can be both a Sponsor and a Participant.  The interface when using the platform as a Sponsor or Participant differ greatly, although every user has access to both.  However, most users will utilize the platform as just one of these user types.
 
 \begin{figure}[H]
 \centering
@@ -197,7 +197,7 @@ These tokens are given purely at the Sponsor’s discretion and Participants typ
 \caption{How Sponsor Tokens create Value.}
 \end{figure}
 
-\subsubsection{Sponsor Veracity and Reputation.}  As a decentralized platform, there is no centralized check on the authenticity of any information the Sponsor inputs to their profile.  Thus, the tradeoff to decentralization is that anyone can claim to be a brand.  A number of mechanisms are used to disincentivize and filter out bad actors from the platform.
+\subsubsection{Sponsor Veracity and Reputation.}  As a decentralized platform, there is no centralized check on the authenticity of any information the Sponsor inputs to their profile.  Thus, the tradeoff to decentralization is that anyone can claim to be a brand offering a drop.  A number of mechanisms are used to disincentivize and filter out bad actors from the platform.
 
 First, we expect most Sponsors to use one wallet address for Lotteries and validate this address on verified social media accounts they control.\footnote{This can be simplified by Sponsor’s adopting ENS names.}   In addition, all users will have access to every Sponsor’s lottery history.  This history includes both rollups and details on individual lotteries, including number of entrants, total amount staked by Participants, and winning ticket details (the stakes and tokens). 
 
@@ -241,11 +241,11 @@ Unlike Sponsors, Participants have no external facing metrics on the platform.
 
 
 \section{Lottery Process}\label{section-LotteryProcess}
-Each Lottery is a smart contract – the Lottery Smart Contract (LSC).  It contains the Sponsor’s identity and the lottery parameters while holding the collateral, participants stakes, and the ticket pool.
+Each Lottery is encoded through the platform’s Manager Smart Contract (MSC), which controls and holds the creation, running, entering, finishing, and outcomes of a lottery.  It is initialized with a Sponsor’s address and lottery parameters, then holds the pool of weighted tickets staked by Participants emitting events with each stake.  As interactions with the Lottery take place a subgraph is generated which is used for UI, data analysis and most importantly, the off-chain computation and selection of winners.
 
-In parallel to the LSC, a separate smart contract containing NFTs representing claims to the lottery items (be they physical or digital) is also created.  It is these NFTs that are transferred to the winners at the end of the lottery.
+In parallel to the MSC, a separate smart contract called the Asset Smart Contract (ASC) creates the NFTs representing claims to the lottery items (be they physical or digital).  It is these NFTs that are transferred to the winners at the end of the lottery.  The ASC utilizes an extendable ERC1155 protocol and also holds all Sponsor tokens and the platform treasury.
 
-At the end date and time of the lottery (determined by the parameters), the smart contract acquires a random number from Chainlink’s VRF.  An off-chain deterministic function, living on multiple oracle nodes for decentralization, calls the random number and ticket data from the Lottery contract to determine the winners, and sends the list back on chain to both the LSC and the NFT contract.
+At the end date and time of the lottery (determined by the parameters), the smart contract acquires a random number from Chainlink’s VRF.  An off-chain deterministic function, living on a Decentralized Oracle Network, calls the random number and ticket data subgraph from the MSC to determine the winners, and sends the list back on chain to both the MSC and the ASC.
 
 \begin{figure}[H]
 \centering
@@ -254,7 +254,7 @@ At the end date and time of the lottery (determined by the parameters), the smar
 \end{figure}
 
 \subsection{Creating a Lottery}\label{subsection-CreatingLottery}
-A Sponsor determines the following lottery parameters which are encoded in the smart contract for that lottery:
+A Sponsor determines the following lottery parameters which are encoded in the MSC for that lottery as the table below.
 \begin{center}
 \begin{table} [h!]
 \begin{tabular}{ |p{3cm}| p{8cm}| }
@@ -275,7 +275,7 @@ Collateral & How much money is locked into the winning NFT. \\
 \hline
 Fulfillment Details & A statement on how the Sponsor plans to trade the winning NFT for the good – be it physical or digital.  Will also include shipping restrictions – highly important! \\
 \hline
-Ticket Weight Function Parameters & Explained in detail in subsection \ref{subsection-Ticketing}\\
+Ticket Weight Function Parameters & Explained in detail in Appendix \ref{APP-TWF}\\
 \hline
 Redemption Period & How long after the lottery the winning NFT can be held or traded before it must be claimed.  After this time, a Sponsor could refuse to exchange for the good thereby forcing the holder to burn for any collateral locked into the NFT.  \\
 \hline
@@ -290,13 +290,13 @@ Redemption Period & How long after the lottery the winning NFT can be held or tr
 \subsubsection{Collateral.}  Being an open platform, Sponsors are highly encouraged to collateralize their lotteries in order to give Participants some insurance for their stake.  This is achieved by locking value into each winning NFT at the creation of a lottery. A lottery is considered fully-collateralized if the value locked in each NFT is the same as the price of the good.\footnote{Note: This will not represent the total value staked for those winners who included a price premium.}   The collateral must be in the Currency of Account for the lottery.  
 
 \subsection{Ticketing, the Pool and the Ticket Weight Factor}\label{subsection-Ticketing}
-Once the lottery begins, be it manually triggered or at a set date and time through Keepers, Participants enter by staking a value equal to or greater than the item’s price into the lottery smart contract, thereby earning a chance to win an item.  This chance is represented by a ticket.  The ticket can include accepted Sponsor Tokens as well.  
+Once the lottery begins, be it manually triggered or at a set date and time through Keepers, Participants enter by staking a value equal to or greater than the item’s price into the MSC, thereby earning a chance to win an item.  This chance is represented by a ticket.  The ticket can include accepted Sponsor Tokens as well.  
 
 \subsubsection{Stake Price Premium.}  The minimum stake required is the Price given by the Sponsor.  Additional value staked, called the Stake Price Premium, increases a ticket’s odds relative to a minimum stake.
 
 \subsubsection{Determining Ticket Weights.} Ticket weight is a key aspect to the \textbf{DropShop} system.  Tickets are weighted, that is each ticket has a distinct probability of winning compared to other tickets staked for that lottery (other than those all weighted ‘1’ – which means no price premium or tokens include).  Collectively, these individual probabilities are collected into a pool.  Rather than one ticket, one chance, each ticket has a unique claim to a portion of the overall pool of entries. Ticket weight is determined by the Participants stake (in relation to the item price), the number of accepted Sponsor Tokens applied, and the Sponsor’s selection of how they want to weight the tickets themselves.
 
-The last aspect – selection of how much price premium and tokens increase ticket weight - is determined by the Ticket Weight Factor (TWF), whose driving function’s parameters are selected by the Sponsor.  It is chosen by the Sponsor and drives an off-chain selection function run on oracles nodes.  As previously stated, the Participant has full visibility on the effects of the ticket weight function’s chosen parameters on a ticket’s weight.  An integrated tool can allow them to vary their intended stake and token amount to clearly see the effect on ticket weight before staking for a ticket.  The details and math behind the TWF can be found in Appendix \ref{APP-TWF}.
+The last aspect – selection of how much price premium and tokens increase ticket weight - is determined by the Ticket Weight Factor (TWF), whose driving function’s parameters are selected by the Sponsor.  It in turn drives an off-chain selection function run on oracle nodes.  As previously stated, the Participant has full visibility on the effects of the ticket weight function’s chosen parameters on a ticket’s weight.  An integrated tool can allow them to vary their intended stake and token amount to clearly see the effect on ticket weight before staking for a ticket.  The details and math behind the TWF can be found in Appendix \ref{APP-TWF}.
 
 As most lotteries will have a quantity greater than one, when a ticket is selected as a winner, it is removed from the pool.
 
@@ -304,15 +304,15 @@ A Participant can stake for more than one ticket to win a lottery, with each tic
 
 One other important note: Sponsors can choose to accept \emph{any} other Sponsor’s tokens for the lottery, or choose not accept any Sponsor tokens at all (although this can also be achieved by eliminating their contribution to weight in the TWF).  This is especially useful in collaborations.  For example, a Yeezy X Supreme drop could choose to accept both Yeezy and Supreme tokens.
 
-\subsection{The Purse, Take, and Residual}\label{subsection-ThePurseLotteryValuedStaked}
-The sum of all winning stakes contained in a lottery’s smart contract is called the Lottery’s Purse.  The minimum Purse for a lottery’s must be its Quantity $\mathrm{Q}$ times the Price $\mathrm{P}$.  The product ($\mathrm{Q} \times \mathrm{P}$) is called the Take, and it is automatically transferred to the Sponsor at the lottery’s conclusion.
+\subsection{The Purse, Sponsor Take, and Residual}\label{subsection-ThePurseLotteryValuedStaked}
+The sum of all winning stakes contained in a lottery’s smart contract is called the Lottery’s Purse.  The minimum Purse for a lottery’s must be its Quantity $\mathrm{Q}$ times the Price $\mathrm{P}$.  The product ($\mathrm{Q} \times \mathrm{P}$) is called the Sposnor Take, and it is automatically transferred to the Sponsor at the lottery’s conclusion.
 
 Most lotteries will have a Purse higher than the Take.  The difference is called the \emph{Residual} of the lottery.  The Residual is important because it can be distributed in a number of wars between the Sponsor, Participants and platform itself.  We discuss how the residual is used in greater detail in [\ref{section-PlatformEconomics}].
 
 \subsection{Lottery Outcomes}\label{subsection-LotteryOutcomes}
 At end time of the lottery\footnote{Technically the next block after the lottery duration ends.},  a 24-hour lockout period of the smart contract begins.  This is to ensure the platform can get some yield value while preventing the use of flash loans to spam a bunch of entries at the last minute. 
 
-After the lockout period ends, Chainlink Keepers will check to ensure the minimum number of tickets have entered the lottery (simply the Quantity of the good offered) and if that passes calls the VRF, sends it and the ticket information to the probability function, and return the winners back.  If it fails for not meeting the minimum number of tickets, the lottery is invalidated and Participant stakes and any Sponsor collateral are returned.  
+After the lockout period ends, Chainlink Keepers will check to ensure the minimum number of tickets have entered the lottery (simply the Quantity of the good offered) and if that passes calls the VRF, sends it and the ticket information to the probability function living on the DON, and return the winners back.   If it fails for not meeting the minimum number of tickets, the lottery is invalidated and Participant stakes and any Sponsor collateral are returned.   
 
 \subsubsection{Selection Function}.  The selection function is a probability function where the tickets are put into a pool and randomly selected, with their relative probabilities of selection determined by their TWF.  More details on the underlying math can be found with the TWF discussion in Appendix \ref{APP-TWF}
 
@@ -341,7 +341,7 @@ Regardless of fulfillment method, once the Participant has received or sold thei
 
 \section{Platform Economics}\label{section-PlatformEconomics}
 
-The platform derives value for itself primarily through staking assets held in lotteries and NFTs for yield.  This yield can then be funneled into a treasury smart contract within the platform.  In addition, a portion of the Residual can be captured by the platform as a fee for service.  
+The platform derives value for itself primarily through staking assets held in lotteries and NFTs for yield.  This yield can then be funneled into a treasury smart contract within the platform.  In addition, a portion of the Residual can be captured by the platform as a fee for service and used to augment yield-bearing efforts.
 
 \subsubsection{Yield Farming.}  Stakes and collateral held within the platform can be used to generate yield (interest) through such platforms as 88mph and Aave, similar to a Lossless lottery such as PoolTogether.\footnote{https://pooltogether.com/}   An algorithm which takes into account inflows and outflows, along with the current level of the treasury, can maximize the amount used to generate yields and rebalance every 24 hours (lock out time post-lottery’s end).  
 
@@ -463,20 +463,9 @@ The graphs above suggests that the randomness spreads the winners all over the p
 
 
 
-\section{Token Protocol}\label{APP-TokenProtocol}
-This paper presents DropShop, a blockchain-based lottery as a solution to the main complaint of limited release product drops – capture by resellers using Bots.
 
-DropShop replaces these purely rent-seeking resellers with the end customer, who create hype value to compensate for the passive value creation by the inflated secondary market created by the Bots.
-
-This hype is rewarded with Sponsor tokens, unique to the brand/company/service who create and distribute these tokens.  In turn, Sponsor tokens improve the probability of winning the lotteries in which they are accepted.  How they affect the probability, along with all of the other lottery parameters, are determined solely and transparently by the Sponsor.
-
-DropShop uses Chainlink VRF for a verified random number to power its selection function which picks the winners.  This function is called through adapters to be executed on multiple oracles nodes, and returns a list of winners.  Winners receive an NFT claim to the asset and the Sponsor receives their Take for the lottery.  Any additional funds staked by the Participants is distributed according to current Residual distribution criteria.
-
-Ultimately, DropShop can go beyond Drops to enable user to user asset transactions of any type – from secondary market transactions to primary market direct auctions and sales.
-
-\
 \paragraph*{Acknowledgements} 
-The authors warmly thank the ChainLink team for sharing historical price feed addresses with us for cross-verification. \textbf{to be edited}
+The authors warmly thank the ChainLink team and Fall Hackathon Sponsors.
 
 % ---- Bibliography ----
 %
